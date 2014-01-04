@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 void main(){
-
+	//тест  русской кодировки
 	//int const size=50000;
 	//int x,sum;
 	//cin >> x;
@@ -72,7 +72,7 @@ void main(){
 				sum=arr[i]+arr[i];
 			}
 		}
-		else continue;
+		//else continue;
 	}
 	cout << sum << endl;
 
