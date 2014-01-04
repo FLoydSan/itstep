@@ -72,7 +72,7 @@ void main(){
 				sum=arr[i]+arr[i];
 			}
 		}
-		//else continue;
+		else continue;
 	}
 	cout << sum << endl;
 
