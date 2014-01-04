@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 void main(){
-	//тест  русской кодировки
+	//тест  русской кодировки in git
 	//int const size=50000;
 	//int x,sum;
 	//cin >> x;
