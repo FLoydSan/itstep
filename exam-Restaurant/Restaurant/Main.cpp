@@ -14,12 +14,12 @@ void main(){
 	//a.ReadFromFile("menu.txt");
 	cout << endl;
 
-	Dish b;
+	//Dish b;
 
-	//b.ChangeName();
-	b.ChangeType();
-	b.ChangePrice();
-	b.Show();
-	b.SaveToFile("menu.txt");
-	//b.ReadFromFile("menu.txt");
+	////b.ChangeName();
+	//b.ChangeType();
+	//b.ChangePrice();
+	//b.Show();
+	//b.SaveToFile("menu.txt");
+	////b.ReadFromFile("menu.txt");
 }
