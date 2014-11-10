@@ -1,17 +1,20 @@
-﻿Build started 11/10/2014 1:42:30 PM.
+﻿Build started 11/10/2014 2:35:14 PM.
      1>Project "C:\Users\Aleksandr\Documents\Visual Studio 2013\Projects\itstep\exam restaurant winapi\restaurant\restaurant.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt DlgLogin.cpp Source.cpp
          Source.cpp
-     1>c:\users\aleksandr\documents\visual studio 2013\projects\itstep\exam restaurant winapi\restaurant\source.cpp(27): warning C4101: 'temp' : unreferenced local variable
-     1>c:\users\aleksandr\documents\visual studio 2013\projects\itstep\exam restaurant winapi\restaurant\source.cpp(27): warning C4101: 'strLog' : unreferenced local variable
-     1>c:\users\aleksandr\documents\visual studio 2013\projects\itstep\exam restaurant winapi\restaurant\source.cpp(27): warning C4101: 'strPass' : unreferenced local variable
+         DlgLogin.cpp
+     1>c:\users\aleksandr\documents\visual studio 2013\projects\itstep\exam restaurant winapi\restaurant\dlglogin.cpp(24): warning C4101: 'temp' : unreferenced local variable
+     1>c:\users\aleksandr\documents\visual studio 2013\projects\itstep\exam restaurant winapi\restaurant\dlglogin.cpp(24): warning C4101: 'strLog' : unreferenced local variable
+     1>c:\users\aleksandr\documents\visual studio 2013\projects\itstep\exam restaurant winapi\restaurant\dlglogin.cpp(24): warning C4101: 'strPass' : unreferenced local variable
+         Generating Code...
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Aleksandr\Documents\Visual Studio 2013\Projects\itstep\exam restaurant winapi\Debug\restaurant.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Aleksandr\Documents\Visual Studio 2013\Projects\itstep\exam restaurant winapi\Debug\restaurant.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Aleksandr\Documents\Visual Studio 2013\Projects\itstep\exam restaurant winapi\Debug\restaurant.lib" /MACHINE:X86 Debug\restaurant.res
+         Debug\DlgLogin.obj
          Debug\Source.obj
          restaurant.vcxproj -> C:\Users\Aleksandr\Documents\Visual Studio 2013\Projects\itstep\exam restaurant winapi\Debug\restaurant.exe
      1>Done Building Project "C:\Users\Aleksandr\Documents\Visual Studio 2013\Projects\itstep\exam restaurant winapi\restaurant\restaurant.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:02.05
+Time Elapsed 00:00:07.13
