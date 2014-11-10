@@ -1,8 +1,7 @@
 #include <windows.h>
 #include "resource.h"
-#include"Header.h"
+#include"header.h"
 
-BOOL CALLBACK DlgLogin(HWND, UINT, WPARAM, LPARAM);
 BOOL close = false;
 ENPosition enPositionWinMain = authorization;
 

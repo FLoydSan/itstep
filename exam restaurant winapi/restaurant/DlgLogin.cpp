@@ -1,4 +1,4 @@
-#include "Header.h"
+#include "header.h"
 
 HWND hLogin, hExit;
 
@@ -8,9 +8,13 @@ BOOL CALLBACK DlgLogin(HWND hWnd, UINT message, WPARAM wp, LPARAM lp)
 	{
 	case WM_CLOSE:
 	{
-					 extern BOOL close;
-					 close = true;
-					 EndDialog(hWnd, 0);
+					 UINT uMbox = MessageBox(0, TEXT("Are you sure you want to quit?"), TEXT("it works"), MB_YESNO | MB_ICONQUESTION | MB_DEFBUTTON1);
+					 if (uMbox == IDYES)
+					 {
+						 extern BOOL close;
+						 close = true;
+						 EndDialog(hWnd, 0);
+					 }
 					 return true;
 	}
 	case WM_INITDIALOG:
@@ -25,9 +29,13 @@ BOOL CALLBACK DlgLogin(HWND hWnd, UINT message, WPARAM wp, LPARAM lp)
 			MessageBox(0, TEXT("here should be login check"), TEXT("it works"), MB_OK | MB_ICONINFORMATION);
 		}
 		else if (LOWORD(wp) == IDC_BUTTON_EXIT){
-			extern BOOL close;
-			close = true;
-			EndDialog(hWnd, 0);
+			UINT uMbox = MessageBox(0, TEXT("Are you sure you want to quit?"), TEXT("it works"), MB_YESNO | MB_ICONQUESTION | MB_DEFBUTTON1);
+			if (uMbox == IDYES)
+			{
+				extern BOOL close;
+				close = true;
+				EndDialog(hWnd, 0);
+			}
 			return TRUE;
 
 		}
