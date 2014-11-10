@@ -1,37 +1,38 @@
 #include <windows.h>
 #include "resource.h"
-//прототип диалоговой процедуры
+
 BOOL CALLBACK DlgProc(HWND, UINT, WPARAM, LPARAM);
+BOOL close = false;
+HWND hLogin, hExit;
 
-int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrev, LPSTR lpszCmdLine,
-	int nCmdShow)
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInst, LPSTR lpszCmdLine, int nCmdShow)
 {
-	MSG msg;
-	// создаём главное окно приложения на основе немодального диалога
-	HWND hDialog = CreateDialog(hInst, MAKEINTRESOURCE(IDD_DIALOG_ADMINISTRATOR), NULL, DlgProc);
-	// Отображаем окно	
-	ShowWindow(hDialog, nCmdShow);
-
-
-	//Запускаем цикл обработки сообщений
-	while (GetMessage(&msg, 0, 0, 0))
-	{
-		TranslateMessage(&msg);
-		DispatchMessage(&msg);
-	}
-	return msg.wParam;
+	return DialogBox(hInstance, MAKEINTRESOURCE(IDD_DIALOG_LOGIN), NULL, DlgProc);
 }
 
-BOOL CALLBACK DlgProc(HWND hWnd, UINT mes, WPARAM wp, LPARAM lp)
+BOOL CALLBACK DlgProc(HWND hWnd, UINT message, WPARAM wp, LPARAM lp)
 {
-	switch (mes)
+	switch (message)
 	{
 	case WM_CLOSE:
-		// закрываем немодальный диалог
-		DestroyWindow(hWnd); // разрушаем окно
-		// останавливаем цикл обработки сообщений
-		PostQuitMessage(0);
+		EndDialog(hWnd, 0);
 		return TRUE;
+	case WM_INITDIALOG:
+		hLogin = GetDlgItem(hWnd, IDC_BUTTON_LOGIN);
+		hExit = GetDlgItem(hWnd, IDC_BUTTON_EXIT);
+		return true;
+	case WM_COMMAND:
+		if (LOWORD(wp) == IDC_BUTTON_LOGIN)
+		{
+			TCHAR strLog[100], strPass[100], temp[100];
+			MessageBox(0, TEXT("here should be login check"), TEXT("it works"), MB_OK | MB_ICONINFORMATION);
+		}
+		else if (LOWORD(wp) == IDC_BUTTON_EXIT){
+			EndDialog(hWnd, 0);
+			return TRUE;
+
+		}
+		return true;
 	}
 	return FALSE;
 }
